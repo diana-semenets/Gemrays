@@ -515,8 +515,9 @@ p + p {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   color: #54545e;
-  background-color: #000000;
+  background-color: #0a0a0b;
   display: block;
+  border: 1px solid #342627;
 }
 
 .form-input + .form-input {
