@@ -124,6 +124,7 @@ ul {
   right: 0;
   top: 0;
   background: linear-gradient(0deg, rgb(32, 33, 35) 0%, rgb(19, 19, 21) 48%);
+  z-index: 5;
 }
 
 .header__box {
@@ -401,7 +402,6 @@ p + p {
 
 .about-page p {
   margin-top: 20px;
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
   color: #54545e;
   text-align: center;
@@ -422,22 +422,71 @@ p + p {
   margin-top: 20px;
 }
 
+.partners__list {
+  margin-top: 50px;
+  padding: 0 10px;
+  display: flex;
+  gap: 30px;
+}
+
+.partners__text {
+  max-width: 800px;
+  margin: 30px auto;
+  font-size: 18px;
+  line-height: 1.6;
+  text-transform: uppercase;
+  text-align: center;
+  color: #f2d2af;
+}
+
+.card-insta {
+  max-width: 500px;
+}
+.card-insta img {
+  width: 100%;
+  max-height: 500px;
+  border: 2px solid #fff;
+}
+
+.card-insta__text {
+  height: 100px;
+  padding: 20px 10px;
+  opacity: 0;
+  font-size: 18px;
+  text-transform: uppercase;
+  background-color: rgba(21, 21, 22, 0.831372549);
+  text-align: center;
+  letter-spacing: 1.5px;
+  transition: all ease-in-out 0.3s;
+}
+
+.card-insta:hover .card-insta__text {
+  opacity: 1;
+  transform: translateY(-70px);
+  width: 100%;
+}
+
+.partners__text a {
+  text-decoration: underline;
+}
+
 .catalog-cards {
   max-width: 1300px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  -moz-column-gap: 20px;
-       column-gap: 20px;
-  row-gap: 20px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  row-gap: 30px;
 }
 
 .card {
   max-width: 300px;
-  max-height: 345px;
+  padding: 10px;
   overflow: hidden;
   display: none;
   transition: all ease 0.3s;
+  background-color: #343439;
 }
 
 .card:hover {
@@ -446,12 +495,42 @@ p + p {
 
 .card__img {
   max-width: 350px;
-  max-height: 345px;
   border: 2px solid #f4ddc4;
 }
 .card__img img {
   width: 100%;
   height: 100%;
+  max-height: 300px;
+  max-width: 300px;
+}
+
+.card__text {
+  margin: 10px 10px 20px 0;
+  text-align: center;
+}
+
+.card__btn {
+  color: #151516;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  background-color: #f2d2af;
+  padding: 7px 12px 6px;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  text-shadow: 0 0 4px #fff;
+  transition: all ease-in-out 0.3s;
+  display: block;
+  text-align: center;
+  align-self: flex-end;
+}
+
+.card__btn:hover {
+  color: #fff;
+  text-shadow: none;
+  background-color: #4d4d4f;
+  border: 1px solid #f2d2af;
 }
 
 .catalog-title {
@@ -475,6 +554,10 @@ p + p {
 
 .card:nth-child(1), .card:nth-child(2), .card:nth-child(3), .card:nth-child(4), .card:nth-child(5), .card:nth-child(6), .card:nth-child(7), .card:nth-child(8), .card:nth-child(9), .card:nth-child(10) {
   display: block;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 70px;
 }
 
 .contact__box {
@@ -607,12 +690,23 @@ footer {
   font-family: "Times New Roman", Times, serif;
 }
 
-@media (max-width: 47.99875em) {
+@media (max-width: 999px) {
+  .one__content .two__content, .three__content {
+    max-width: 500px;
+    padding: 60px 20px 50px 60px;
+  }
+  .about__inner {
+    padding: 100px 10px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 796px) {
   .menu {
     position: relative;
   }
   .header {
     text-align: end;
+    padding: 10px 20px 10px;
   }
   .header__box {
     padding: 0 15px;
@@ -629,8 +723,7 @@ footer {
   }
   .active-menu {
     background-color: transparent;
-    border-bottom: 2px solid #FF9330;
-    padding: 2px;
+    padding-bottom: 2px;
   }
   .header__nav li {
     display: block;
@@ -656,9 +749,9 @@ footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #FF9330;
+    background-color: #f2d2af;
     transition: all 0.5s;
-    color: #FF9330;
+    color: #f2d2af;
   }
   .menu-btn span:nth-of-type(2) {
     top: calc(50% - 5px);
@@ -668,12 +761,11 @@ footer {
   }
   .menu {
     position: fixed;
-    padding-right: 50px;
     top: 120px;
     right: 0;
     width: 100%;
     height: 100%;
-    background: #1F294D;
+    background: #151516;
     line-height: 1.8;
     transform: translateX(100%);
     transition: transform 0.5s;
@@ -699,5 +791,89 @@ footer {
   }
   .menu__list {
     display: block;
+  }
+  .one__title, .two__title, .three__title {
+    font-size: 38px;
+  }
+  .two__text, .one__text, .three__text {
+    font-size: 20px;
+  }
+  .two__img img {
+    width: 200px;
+  }
+  .one, .two, .three {
+    height: 500px;
+  }
+  .about__inner {
+    padding: 100px 10px 50px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card-insta__text {
+    opacity: 1;
+    transform: translateY(-70px);
+    width: 100%;
+  }
+  .catalog-cards {
+    justify-self: center;
+    grid-template-columns: repeat(2, 1fr);
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+  .contact__box {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media (max-width: 500px) {
+  .one__inner, .two__inner, .three__inner {
+    display: block;
+  }
+  .one__content, .two__content, .three__content {
+    max-width: 648px;
+    padding: 20px;
+  }
+  .one__title, .two__title, .three__title {
+    font-size: 32px;
+  }
+  .one__img, .two__img, .three__img {
+    display: none;
+  }
+  .about__inner {
+    padding-bottom: 0;
+    grid-template-columns: 1fr;
+  }
+  .partners__list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card {
+    justify-self: center;
+  }
+  .contact-form {
+    flex: 0 100%;
+  }
+  .footer__box {
+    padding: 0 10px;
+  }
+  .footer-menu {
+    display: block;
+  }
+  .footer-menu li + li {
+    margin-top: 10px;
+  }
+  .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 50px;
+  }
+  .contact-adress__title, .contact-form__title {
+    font-size: 22px;
+  }
+}
+@media (max-width: 350px) {
+  .one__title, .two__title, .three__title {
+    font-size: 28px;
+  }
+  .contact-adress__title, .contact-form__title {
+    font-size: 20px;
   }
 }/*# sourceMappingURL=style.css.map */
