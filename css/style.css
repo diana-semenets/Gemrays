@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0px;
   margin: 0px;
@@ -427,6 +428,7 @@ p + p {
   padding: 0 10px;
   display: flex;
   gap: 30px;
+  transform: translateY(200px);
 }
 
 .partners__text {
@@ -487,6 +489,8 @@ p + p {
   display: none;
   transition: all ease 0.3s;
   background-color: #343439;
+  position: relative;
+  animation: animationCard 1s ease-in-out;
 }
 
 .card:hover {
@@ -533,6 +537,16 @@ p + p {
   border: 1px solid #f2d2af;
 }
 
+@keyframes animationCard { /* объявляем имя анимации: "go-left-right" */
+  from {
+    bottom: -100%;
+    opacity: 0;
+  } /* от: left: 0px */
+  to {
+    bottom: 0;
+    opacity: 1;
+  } /* до: left: 100%-50px */
+}
 .catalog-title {
   max-width: 1300px;
   margin: 50px auto 30px;
@@ -647,6 +661,28 @@ p + p {
   color: #fff;
   text-shadow: none;
   background-color: #4d4d4f;
+}
+
+.sticky {
+  position: fixed;
+}
+
+@keyframes itemImg {
+  0% {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.about.move .about__inner {
+  animation: itemImg 2s forwards;
+}
+
+.partners.move .partners__list {
+  animation: itemImg 2s forwards;
 }
 
 footer {
@@ -867,6 +903,9 @@ footer {
   }
   .contact-adress__title, .contact-form__title {
     font-size: 22px;
+  }
+  .card-insta + .card-insta {
+    margin-top: -50px;
   }
 }
 @media (max-width: 350px) {
