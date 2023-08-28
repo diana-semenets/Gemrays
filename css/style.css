@@ -880,7 +880,7 @@ footer {
     grid-template-columns: 1fr;
   }
   .partners__list {
-    flex-wrap: wrap;
+    display: block;
     justify-content: center;
   }
   .card {
@@ -906,6 +906,9 @@ footer {
   }
   .card-insta + .card-insta {
     margin-top: -50px;
+  }
+  .partners__list {
+    transform: translateY(0);
   }
 }
 @media (max-width: 350px) {
