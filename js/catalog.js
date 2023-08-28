@@ -88,6 +88,7 @@ for (let i of testiomnialData) slideHolder.innerHTML += `
             for(let i = currentItems; i < currentItems+5; i++) {
                 if(wrapper[i]){
                     wrapper[i].style.display = 'block';
+                    
                 }
             }
             currentItems +=5;
