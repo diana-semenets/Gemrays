@@ -677,12 +677,21 @@ p + p {
     opacity: 1;
   }
 }
-.about.move .about__inner {
+.about-main.move .about__inner {
   animation: itemImg 2s forwards;
+}
+
+.about-inner {
+  transform: translateY(200px);
+  opacity: 0;
 }
 
 .partners.move .partners__list {
   animation: itemImg 2s forwards;
+}
+
+.partners__list {
+  opacity: 0;
 }
 
 footer {
@@ -769,6 +778,9 @@ footer {
   }
   .header__nav .menu ul {
     padding-top: 30px;
+  }
+  .menu li + li {
+    margin-top: 10px;
   }
   .menu-btn {
     width: 30px;
@@ -909,6 +921,7 @@ footer {
   }
   .partners__list {
     transform: translateY(0);
+    opacity: 1;
   }
 }
 @media (max-width: 350px) {
