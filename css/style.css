@@ -196,13 +196,7 @@ ul {
 }
 
 .footer__name {
-  max-width: 220px;
- 
-}
-.footer__name a {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  max-width: 120px;
 }
 .footer__name img {
   width: 100%;
@@ -236,6 +230,9 @@ ul {
 }
 .one__title {
   font-size: 44px;
+  transform: scale(0.5);
+  opacity: 0;
+  animation: title 2s forwards;
 }
 .one__text {
   margin-top: 50px;
@@ -302,6 +299,16 @@ ul {
   background-color: #c6b19a;
 }
 
+@keyframes title {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 .about {
   border-top: 1px solid #f4ddc4;
 }
