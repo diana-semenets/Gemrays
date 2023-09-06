@@ -196,7 +196,13 @@ ul {
 }
 
 .footer__name {
-  max-width: 120px;
+  max-width: 220px;
+ 
+}
+.footer__name a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 .footer__name img {
   width: 100%;
