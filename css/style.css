@@ -205,7 +205,7 @@ ul {
 .one {
   height: 700px;
   color: #f2d2af;
-  background-image: url("../img/bg1.png");
+  background-image: url("../img/bg1-3.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -239,7 +239,7 @@ ul {
 .two {
   height: 700px;
   color: #f4ddc4;
-  background-image: url("../img/bg2.png");
+  background-image: url("../img/bg2.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -278,7 +278,7 @@ ul {
 .three {
   height: 700px;
   color: #f4ddc4;
-  background-image: url("../img/bg3.png");
+  background-image: url("../img/bg3.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
